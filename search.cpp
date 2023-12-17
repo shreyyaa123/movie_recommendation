@@ -85,7 +85,7 @@ char searchMovie::askingForOption()
 
 void searchMovie::searchMain(searchMovie &find)
 {
-    string filename = "/class/classes/ayama039/final-project-smoha095-ashah174-ayama039-skoth011/ movies.tsv";
+    string filename = "/Users/shreyamohan/Desktop/UCR/movie_recommendation/ movies.tsv";
     Database database;
     bool loaded = database.loadFromTSV(filename);
     char filterLetter;

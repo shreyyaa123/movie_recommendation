@@ -20,7 +20,7 @@ void MovieRec::movieRecommendationOverall(prefs options)
     vector<string> director;
     options.getdirector(director);
     Database db;
-    string filename = "/class/classes/ayama039/final-project-smoha095-ashah174-ayama039-skoth011/ movies.tsv";
+    string filename = "/Users/shreyamohan/Desktop/UCR/movie_recommendation/ movies.tsv";
     bool loaded = db.loadFromTSV(filename);
     if (loaded == true) {
         vector<Movie> filteredMovies = db.filter(genre, age, actor, director, options);
@@ -39,7 +39,7 @@ void MovieRec::movieRecByGenre(prefs options)
     int age = options.getage();
 
     Database db;
-    string filename = "/class/classes/ayama039/final-project-smoha095-ashah174-ayama039-skoth011/ movies.tsv";
+    string filename = "/Users/shreyamohan/Desktop/UCR/movie_recommendation/ movies.tsv";
     bool loaded = db.loadFromTSV(filename);
     if (loaded == true){
         vector <string> genre;
@@ -61,7 +61,7 @@ void MovieRec::movieRecommendationMaturityRating(prefs options) {
     string maturityrating= movie.getMaturityRating();
     if (valid == true){
         Database db;
-        string filename = "/class/classes/ayama039/final-project-smoha095-ashah174-ayama039-skoth011/ movies.tsv";
+        string filename = "/Users/shreyamohan/Desktop/UCR/movie_recommendation/ movies.tsv";
         bool loaded = db.loadFromTSV(filename);
         if (loaded == true) {
             vector<Movie> maturity = db.getMoviesbyMaturityRating(maturityrating);
@@ -93,7 +93,7 @@ void MovieRec::movieRecommendationsearch(searchMovie find, prefs options) {
     }
     else {
     Database db;
-    string filename = "/class/classes/ayama039/final-project-smoha095-ashah174-ayama039-skoth011/ movies.tsv";
+    string filename = "/Users/shreyamohan/Desktop/UCR/movie_recommendation/ movies.tsv";
     bool loaded = db.loadFromTSV(filename);
         if (loaded == true) {
             vector<Movie> searches = db.filter(newgenre, age, actor, director, options);
@@ -111,7 +111,7 @@ void MovieRec::movieRecommendationsearch(searchMovie find, prefs options) {
 
 void MovieRec::movieRecommendationoutput(prefs options, searchMovie find){
     Database db;
-    string filename = "/class/classes/ayama039/final-project-smoha095-ashah174-ayama039-skoth011/ movies.tsv";
+    string filename = "/Users/shreyamohan/Desktop/UCR/movie_recommendation/ movies.tsv";
     bool loaded = db.loadFromTSV(filename);
     if (loaded == true) {
         char answer;
